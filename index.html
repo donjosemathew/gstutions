@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GS Tuitions - Expert School Tutoring</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts DM Sans -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      // Tailwind Config
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4f46e5", // Indigo
+              secondary: "#1e293b", // Slate
+              accent: "#f97316", // Orange
+            },
+            fontFamily: {
+              sans: ['"DM Sans"', "sans-serif"],
+            },
+          },
+        },
+      };
+
+      // Mobile menu toggle
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuToggle.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = document.querySelectorAll("#mobile-menu a");
+        mobileLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            mobileMenu.classList.add("hidden");
+          });
+        });
+      });
+    </script>
+  </head>
+  <body class="font-sans text-gray-800 bg-gray-50">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-md fixed w-full z-50">
+      <div class="container mx-auto px-4">
+        <nav class="flex justify-between items-center py-4">
+          <a href="#" class="text-2xl font-bold">
+            <span class="text-primary">GS</span
+            ><span class="text-secondary">Tuitions</span>
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden">
+            <button id="menu-toggle" class="text-secondary focus:outline-none">
+              <i class="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <ul class="hidden md:flex space-x-8">
+            <li>
+              <a
+                href="#home"
+                class="font-semibold hover:text-primary transition-colors"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="font-semibold hover:text-primary transition-colors"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#subjects"
+                class="font-semibold hover:text-primary transition-colors"
+                >Subjects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#features"
+                class="font-semibold hover:text-primary transition-colors"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a
+                href="#testimonials"
+                class="font-semibold hover:text-primary transition-colors"
+                >Testimonials</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="font-semibold hover:text-primary transition-colors"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white w-full shadow-lg">
+        <ul class="py-2">
+          <li>
+            <a href="#home" class="block py-3 px-4 hover:bg-gray-50 font-medium"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="block py-3 px-4 hover:bg-gray-50 font-medium"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#subjects"
+              class="block py-3 px-4 hover:bg-gray-50 font-medium"
+              >Subjects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#features"
+              class="block py-3 px-4 hover:bg-gray-50 font-medium"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a
+              href="#testimonials"
+              class="block py-3 px-4 hover:bg-gray-50 font-medium"
+              >Testimonials</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="block py-3 px-4 hover:bg-gray-50 font-medium"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="relative pt-16 h-screen flex items-center bg-cover bg-center"
+      style="
+        background-image: linear-gradient(
+            rgba(30, 41, 59, 0.8),
+            rgba(30, 41, 59, 0.8)
+          ),
+          url('https://images.unsplash.com/photo-1636202339022-7d67f7447e3a');
+      "
+    >
+      <div class="container mx-auto px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
+          >
+            Excel in Science & Mathematics
+          </h1>
+          <p class="text-lg md:text-xl text-gray-100 mb-8">
+            Professional tutoring in Mathematics, Physics, and Chemistry for
+            school students. Build a strong foundation for your academic
+            success.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a
+              href="#subjects"
+              class="bg-primary hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:-translate-y-1 transition-all transform duration-300 uppercase tracking-wide text-sm"
+              >Explore Subjects</a
+            >
+            <a
+              href="#contact"
+              class="bg-white hover:bg-gray-100 text-secondary font-bold py-3 px-8 rounded-lg shadow-lg hover:-translate-y-1 transition-all transform duration-300 uppercase tracking-wide text-sm"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating Stats -->
+      <div
+        class="absolute bottom-0 left-0 right-0 bg-white bg-opacity-10 backdrop-blur-sm py-4"
+      >
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap justify-center gap-8 text-center">
+            <div class="px-4">
+              <div class="text-3xl font-bold text-white">95%</div>
+              <div class="text-gray-200">Success Rate</div>
+            </div>
+            <div class="px-4">
+              <div class="text-3xl font-bold text-white">1000+</div>
+              <div class="text-gray-200">Students Taught</div>
+            </div>
+            <div class="px-4">
+              <div class="text-3xl font-bold text-white">10+</div>
+              <div class="text-gray-200">Years Experience</div>
+            </div>
+            <div class="px-4">
+              <div class="text-3xl font-bold text-white">3</div>
+              <div class="text-gray-200">Specialized Subjects</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">
+            About GS Tuitions
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Providing expert tutoring services to help students achieve academic
+            excellence and build a strong foundation for their future.
+          </p>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="md:w-1/2">
+            <h3 class="text-2xl font-bold text-secondary mb-4">
+              Your Path to Academic Success
+            </h3>
+            <p class="text-gray-600 mb-6">
+              GS Tuitions was founded with a simple mission: to make quality
+              education accessible to all students. Our experienced tutors
+              specialize in Mathematics, Physics, and Chemistry, providing
+              personalized learning experiences tailored to each student's
+              needs.
+            </p>
+            <p class="text-gray-600 mb-6">
+              With over 10 years of experience, we've helped thousands of
+              students improve their grades, build confidence, and develop a
+              genuine interest in these critical subjects. Our teaching
+              methodology focuses on concept clarity, problem-solving skills,
+              and exam preparation techniques.
+            </p>
+
+            <!-- About Features -->
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <div class="bg-primary bg-opacity-10 p-2 rounded-lg mr-4">
+                  <i class="fas fa-chalkboard-teacher text-primary text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-secondary">
+                    Experienced Educators
+                  </h4>
+                  <p class="text-gray-600">
+                    Our tutors have advanced degrees and years of teaching
+                    experience.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="bg-primary bg-opacity-10 p-2 rounded-lg mr-4">
+                  <i class="fas fa-users text-primary text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-secondary">
+                    Personalized Approach
+                  </h4>
+                  <p class="text-gray-600">
+                    We adapt our teaching methods to match each student's
+                    learning style.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="bg-primary bg-opacity-10 p-2 rounded-lg mr-4">
+                  <i class="fas fa-graduation-cap text-primary text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-secondary">Proven Results</h4>
+                  <p class="text-gray-600">
+                    Our students consistently achieve top grades in their exams.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:w-1/2">
+            <div class="rounded-xl overflow-hidden shadow-xl">
+              <img
+                src="https://images.unsplash.com/photo-1588072432836-e10032774350"
+                alt="Students learning"
+                class="w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Subjects Section -->
+    <section id="subjects" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">
+            Our Subjects
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Comprehensive tutoring in key science and mathematics subjects to
+            help students excel in school and beyond.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Mathematics Card -->
+          <div
+            class="bg-white rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-all duration-300"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1509228627152-72ae9ae6848d"
+                alt="Mathematics"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <div class="bg-primary bg-opacity-10 p-2 rounded-full mr-3">
+                  <i class="fas fa-calculator text-primary text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-secondary">Mathematics</h3>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Master mathematical concepts from algebra and geometry to
+                calculus and statistics. Our approach focuses on problem-solving
+                techniques and exam strategies.
+              </p>
+              <ul class="text-gray-600 mb-6 space-y-2">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-2"></i> Algebra &
+                  Functions
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-2"></i> Geometry &
+                  Trigonometry
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-2"></i> Calculus &
+                  Statistics
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-2"></i> Number Theory &
+                  Sets
+                </li>
+              </ul>
+              <div class="flex justify-between items-center">
+                <span
+                  class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm font-medium"
+                  >Grades 8-12</span
+                >
+                <a
+                  href="#contact"
+                  class="inline-block bg-primary hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Physics Card -->
+          <div
+            class="bg-white rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-all duration-300"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa"
+                alt="Physics"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <div class="bg-primary bg-opacity-10 p-2 rounded-full mr-3">
+                  <i class="fas fa-atom text-primary text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-secondary">Physics</h3>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Develop a thorough understanding of physics concepts through
+                practical examples, experiments, and problem-based learning
+                approaches.
+              </p>
+              <ul class="text-gray-600 mb-6 space-y-2">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-2"></i> Mechanics &
+                  Dynamics
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-2"></i> Electricity &
+                  Magnetism
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-2"></i> Optics & Waves
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-2"></i> Modern Physics
+                </li>
+              </ul>
+              <div class="flex justify-between items-center">
+                <span
+                  class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm font-medium"
+                  >Grades 9-12</span
+                >
+                <a
+                  href="#contact"
+                  class="inline-block bg-primary hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Chemistry Card -->
+          <div
+            class="bg-white rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-all duration-300"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1532094349884-543bc11b234d"
+                alt="Chemistry"
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <div class="bg-primary bg-opacity-10 p-2 rounded-full mr-3">
+                  <i class="fas fa-flask text-primary text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-secondary">Chemistry</h3>
+              </div>
+              <p class="text-gray-600 mb-4">
+                From basic chemical reactions to advanced organic chemistry, our
+                tutors help make complex concepts understandable and engaging.
+              </p>
+              <ul class="text-gray-600 mb-6 space-y-2">
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-2"></i> Inorganic
+                  Chemistry
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-2"></i> Organic
+                  Chemistry
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-2"></i> Physical
+                  Chemistry
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check text-primary mr-2"></i> Analytical
+                  Methods
+                </li>
+              </ul>
+              <div class="flex justify-between items-center">
+                <span
+                  class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm font-medium"
+                  >Grades 9-12</span
+                >
+                <a
+                  href="#contact"
+                  class="inline-block bg-primary hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">
+            What Our Students Say
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Don't just take our word for it. Here's what our students and
+            parents have to say about GS Tuitions.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div
+            class="bg-gray-50 rounded-xl p-6 shadow-lg hover:-translate-y-2 transition-all duration-300"
+          >
+            <div class="flex justify-center mb-4">
+              <div class="text-accent">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 italic mb-6">
+              "My grades in Physics improved from a C to an A after just one
+              term with GS Tuitions. The tutors explain complex concepts in a
+              way that's easy to understand and remember."
+            </p>
+            <div class="flex items-center">
+              <div class="bg-primary bg-opacity-10 p-2 rounded-full mr-3">
+                <i class="fas fa-user text-primary"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-secondary">Sarah Johnson</h4>
+                <p class="text-gray-500 text-sm">Grade 11 Student</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div
+            class="bg-gray-50 rounded-xl p-6 shadow-lg hover:-translate-y-2 transition-all duration-300"
+          >
+            <div class="flex justify-center mb-4">
+              <div class="text-accent">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 italic mb-6">
+              "Math was always challenging for my son until he joined GS
+              Tuitions. The personalized approach and patient guidance have made
+              a tremendous difference. His confidence has soared!"
+            </p>
+            <div class="flex items-center">
+              <div class="bg-primary bg-opacity-10 p-2 rounded-full mr-3">
+                <i class="fas fa-user text-primary"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-secondary">Michael Thompson</h4>
+                <p class="text-gray-500 text-sm">Parent</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div
+            class="bg-gray-50 rounded-xl p-6 shadow-lg hover:-translate-y-2 transition-all duration-300"
+          >
+            <div class="flex justify-center mb-4">
+              <div class="text-accent">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 italic mb-6">
+              "The Chemistry lessons at GS Tuitions are engaging and practical.
+              I finally understand concepts that confused me for years. I
+              secured an A+ in my final exams!"
+            </p>
+            <div class="flex items-center">
+              <div class="bg-primary bg-opacity-10 p-2 rounded-full mr-3">
+                <i class="fas fa-user text-primary"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-secondary">Emily Chen</h4>
+                <p class="text-gray-500 text-sm">Grade 12 Student</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div
+            class="bg-gray-50 rounded-xl p-6 shadow-lg hover:-translate-y-2 transition-all duration-300"
+          >
+            <div class="flex justify-center mb-4">
+              <div class="text-accent">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 italic mb-6">
+              "As a student who always struggled with math, I never thought I'd
+              pursue engineering. Thanks to GS Tuitions, I not only passed with
+              flying colors but developed a genuine interest in the subject."
+            </p>
+            <div class="flex items-center">
+              <div class="bg-primary bg-opacity-10 p-2 rounded-full mr-3">
+                <i class="fas fa-user text-primary"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-secondary">Ryan Patel</h4>
+                <p class="text-gray-500 text-sm">Former Student</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 5 -->
+          <div
+            class="bg-gray-50 rounded-xl p-6 shadow-lg hover:-translate-y-2 transition-all duration-300"
+          >
+            <div class="flex justify-center mb-4">
+              <div class="text-accent">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 italic mb-6">
+              "The tutors at GS Tuitions don't just teach the syllabus, they
+              ensure students truly understand the fundamentals. My daughter's
+              approach to problem-solving has completely transformed."
+            </p>
+            <div class="flex items-center">
+              <div class="bg-primary bg-opacity-10 p-2 rounded-full mr-3">
+                <i class="fas fa-user text-primary"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-secondary">Amanda Wilson</h4>
+                <p class="text-gray-500 text-sm">Parent</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 6 -->
+          <div
+            class="bg-gray-50 rounded-xl p-6 shadow-lg hover:-translate-y-2 transition-all duration-300"
+          >
+            <div class="flex justify-center mb-4">
+              <div class="text-accent">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 italic mb-6">
+              "Preparing for competitive exams was stressful until I joined GS
+              Tuitions. Their focused approach and practice materials were
+              instrumental in my success. I highly recommend them!"
+            </p>
+            <div class="flex items-center">
+              <div class="bg-primary bg-opacity-10 p-2 rounded-full mr-3">
+                <i class="fas fa-user text-primary"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-secondary">David Rodriguez</h4>
+                <p class="text-gray-500 text-sm">College Freshman</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="text-center mt-12">
+          <a
+            href="#contact"
+            class="inline-block bg-primary hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:-translate-y-1 transition-all transform duration-300 uppercase tracking-wide text-sm"
+            >Start Your Journey</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">
+            Get in Touch
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Have questions or ready to start your tutoring journey with us?
+            Reach out through our contact form or use our direct contact
+            details.
+          </p>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-12">
+          <!-- Contact Form -->
+          <div class="lg:w-2/3 bg-white p-8 rounded-xl shadow-lg">
+            <h3 class="text-2xl font-bold text-secondary mb-6">
+              Send Us a Message
+            </h3>
+            <form>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label for="name" class="block text-gray-700 font-medium mb-2"
+                    >Full Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    placeholder="your.email@example.com"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="mb-6">
+                <label for="phone" class="block text-gray-700 font-medium mb-2"
+                  >Phone Number</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="Your phone number"
+                />
+              </div>
+
+              <div class="mb-6">
+                <label
+                  for="subject"
+                  class="block text-gray-700 font-medium mb-2"
+                  >Subject Interest</label
+                >
+                <select
+                  id="subject"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  required
+                >
+                  <option value="" disabled selected>Select a subject</option>
+                  <option value="mathematics">Mathematics</option>
+                  <option value="physics">Physics</option>
+                  <option value="chemistry">Chemistry</option>
+                  <option value="multiple">Multiple Subjects</option>
+                </select>
+              </div>
+
+              <div class="mb-6">
+                <label
+                  for="message"
+                  class="block text-gray-700 font-medium mb-2"
+                  >Your Message</label
+                >
+                <textarea
+                  id="message"
+                  rows="5"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="Tell us about your tutoring needs..."
+                  required
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="bg-primary hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:-translate-y-1 transition-all transform duration-300 uppercase tracking-wide text-sm w-full"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="lg:w-1/3">
+            <div
+              class="bg-secondary text-white p-8 rounded-xl shadow-lg h-full"
+            >
+              <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div class="bg-white bg-opacity-10 p-3 rounded-full mr-4">
+                    <i class="fas fa-map-marker-alt text-accent"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-lg">Our Location</h4>
+                    <p class="text-gray-300">
+                      123 Education Street, Learning City, LC 12345
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="bg-white bg-opacity-10 p-3 rounded-full mr-4">
+                    <i class="fas fa-phone text-accent"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-lg">Phone Number</h4>
+                    <p class="text-gray-300">(555) 123-4567</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="bg-white bg-opacity-10 p-3 rounded-full mr-4">
+                    <i class="fas fa-envelope text-accent"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-lg">Email Address</h4>
+                    <p class="text-gray-300">info@gstuitions.com</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="bg-white bg-opacity-10 p-3 rounded-full mr-4">
+                    <i class="fas fa-clock text-accent"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-lg">Operating Hours</h4>
+                    <p class="text-gray-300">Monday - Friday: 9am - 7pm</p>
+                    <p class="text-gray-300">Saturday: 10am - 5pm</p>
+                    <p class="text-gray-300">Sunday: Closed</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Social Media Links -->
+              <div class="mt-8">
+                <h4 class="font-semibold text-lg mb-4">Follow Us</h4>
+                <div class="flex space-x-4">
+                  <a
+                    href="#"
+                    class="bg-white bg-opacity-10 hover:bg-opacity-20 p-3 rounded-full transition-colors"
+                  >
+                    <i class="fab fa-facebook-f text-accent"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="bg-white bg-opacity-10 hover:bg-opacity-20 p-3 rounded-full transition-colors"
+                  >
+                    <i class="fab fa-instagram text-accent"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="bg-white bg-opacity-10 hover:bg-opacity-20 p-3 rounded-full transition-colors"
+                  >
+                    <i class="fab fa-twitter text-accent"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="bg-white bg-opacity-10 hover:bg-opacity-20 p-3 rounded-full transition-colors"
+                  >
+                    <i class="fab fa-youtube text-accent"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white pt-12 pb-6">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <!-- Company Info -->
+          <div>
+            <h3 class="text-xl font-bold mb-4">
+              <span class="text-primary">GS</span> Tuitions
+            </h3>
+            <p class="text-gray-300 mb-4">
+              Providing expert tutoring in Mathematics, Physics, and Chemistry
+              for school students. Building strong foundations for academic
+              success.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-300 hover:text-accent transition-colors"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-accent transition-colors"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-accent transition-colors"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-accent transition-colors"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#home"
+                  class="text-gray-300 hover:text-accent transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-300 hover:text-accent transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#subjects"
+                  class="text-gray-300 hover:text-accent transition-colors"
+                  >Our Subjects</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#features"
+                  class="text-gray-300 hover:text-accent transition-colors"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#testimonials"
+                  class="text-gray-300 hover:text-accent transition-colors"
+                  >Testimonials</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-300 hover:text-accent transition-colors"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <h4 class="text-lg font-bold mb-4">Our Services</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-accent transition-colors"
+                  >One-on-One Tutoring</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-accent transition-colors"
+                  >Group Classes</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-accent transition-colors"
+                  >Exam Preparation</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-accent transition-colors"
+                  >Homework Help</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-accent transition-colors"
+                  >Summer Programs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-accent transition-colors"
+                  >Advanced Placement</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h4 class="text-lg font-bold mb-4">Contact Us</h4>
+            <ul class="space-y-3">
+              <li class="flex items-center">
+                <i class="fas fa-map-marker-alt mr-3 text-accent"></i>
+                <span class="text-gray-300"
+                  >123 Education Street, Learning City, LC 12345</span
+                >
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone mr-3 text-accent"></i>
+                <span class="text-gray-300">(555) 123-4567</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-envelope mr-3 text-accent"></i>
+                <span class="text-gray-300">info@gstuitions.com</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-clock mr-3 text-accent"></i>
+                <span class="text-gray-300">Mon-Fri: 9am - 7pm</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="border-t border-gray-700 my-6"></div>
+
+        <!-- Copyright and Terms -->
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            &copy; 2025 GS Tuitions. All rights reserved.
+          </p>
+          <div class="flex space-x-4 text-sm text-gray-400">
+            <a href="#" class="hover:text-accent transition-colors"
+              >Privacy Policy</a
+            >
+            <a href="#" class="hover:text-accent transition-colors"
+              >Terms of Service</a
+            >
+            <a href="#" class="hover:text-accent transition-colors"
+              >Cookie Policy</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
